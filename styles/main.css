@@ -1,0 +1,109 @@
+/*General style*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h3, h5 {
+    margin: 5px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.content {
+    padding: 15px;
+}
+
+p {
+    margin: 5px;
+}
+
+.hide {
+    display: none;
+}
+.show-hide-button {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 90%;
+    background: rgba(239, 239, 239, 0.5);
+    border: 1px solid black;
+    border-radius: 3px;
+    justify-content: center;
+}
+
+.users, .posts, .comments {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2vw;
+}
+
+.user, .post, .comment {
+    background: rgba(239, 239, 239, 0.5);
+    box-sizing: border-box;
+    border-style: outset;
+    border-radius: 10px;
+}
+
+/*index.html */
+.user {
+    width: 49%;
+    height: 15vh;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*user-details.html*/
+.user-info {
+    padding: 20px;
+}
+
+.user-info > div > div {
+    padding-left: 20px;
+}
+
+.user-info > div > div > div {
+    padding-left: 40px;
+}
+
+.post {
+    width: 19%;
+    padding: 15px;
+    position: relative;
+}
+
+.post > a {
+    margin-left: calc((100% - 120px) / 2);
+    position: absolute;
+    bottom: 0;
+}
+
+/*post-details.html*/
+.comment {
+    width: 24%;
+    padding: 15px;
+
+    position: relative;
+}
+
+a {
+    all: unset;
+    width: 90px;
+    height: 30px;
+    margin: 5px;
+    background-color: rgba(185, 184, 184, 0.3);
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
