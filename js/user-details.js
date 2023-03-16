@@ -30,6 +30,7 @@ let posts = fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
         }
     })
     .catch(error => console.error(error));
+
 Promise.all([user, posts])
     .then((result) => {
         const user = result[0];
@@ -63,6 +64,4 @@ Promise.all([user, posts])
             postsButton.innerText = 'Hide Posts'
         }
     });
-
 })
-

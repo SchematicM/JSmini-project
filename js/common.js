@@ -1,4 +1,4 @@
-export  default function createUserObj(user, userDiv) {
+export default function createUserObj(user, userDiv) {
     for (const userKey in user) {
         let div = document.createElement('div');
         div.classList.add(userKey);

@@ -6,10 +6,9 @@ body, head {
     background: linear-gradient(to right, mediumblue, yellow);
     background-size: cover;
     color: white;
-
 }
 
-h3, h4,h5 {
+h3, h4, h5 {
     margin: 5px;
 }
 
@@ -28,6 +27,7 @@ p {
 .hide {
     display: none;
 }
+
 .show-hide-button {
     display: flex;
     justify-content: center;
@@ -41,7 +41,7 @@ button {
     border: 1px solid white;
     border-radius: 25px;
     justify-content: center;
-    color:white;
+    color: white;
 }
 
 .users, .posts, .comments {
@@ -53,7 +53,7 @@ button {
     row-gap: 2vw;
 }
 
-.user, .post, .comment,.user-info,.post-info {
+.user, .post, .comment, .user-info, .post-info {
     background: rgba(161, 160, 160, 0.7);
     box-sizing: border-box;
     border-style: outset;
@@ -69,6 +69,7 @@ button {
     display: flex;
     flex-direction: column;
 }
+
 .user > a {
     position: absolute;
     bottom: 0;
