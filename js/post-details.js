@@ -46,6 +46,7 @@ Promise.all([post, comments])
     const postsButton = document.getElementsByTagName('button')[0];
     postsButton.addEventListener('click', function () {
         commentsDiv.classList.toggle('hide');
+        commentsDiv.scrollIntoView();
         if (postsButton.outerText === 'Hide Comments') {
             postsButton.innerText = 'View Comments'
         } else {
