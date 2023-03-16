@@ -39,7 +39,7 @@ Promise.all([post, comments])
         for (const comment of comments) {
             const div = document.createElement('div');
             div.classList.add('comment');
-            div.innerHTML += `<h5>${comment.email}</h5><h5>Title: ${comment.name}</h5><p>${comment.body}</p>`;
+            div.innerHTML += `<h4>${comment.email}</h4><h4>Title: ${comment.name}</h4><p>${comment.body}</p>`;
             commentsContainer.appendChild(div);
         }
     }).then(resolve => {

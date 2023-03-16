@@ -9,7 +9,7 @@ body, head {
 
 }
 
-h3, h5 {
+h3, h4,h5 {
     margin: 5px;
 }
 
@@ -89,6 +89,7 @@ button {
 
 .post {
     width: 19%;
+    height: 22vh;
     padding: 15px;
     position: relative;
 }
