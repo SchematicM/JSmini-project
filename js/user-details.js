@@ -56,6 +56,7 @@ Promise.all([user, posts])
     const postsButton = document.getElementsByTagName('button')[0];
     postsButton.addEventListener('click', function () {
         postDiv.classList.toggle('hide');
+        postDiv.scrollIntoView();
         if (postsButton.outerText === 'Hide Posts') {
             postsButton.innerText = 'View Posts'
         } else {
