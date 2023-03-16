@@ -26,9 +26,23 @@ const postDiv = document.querySelector('.posts-titles');
 const postsContainer = document.querySelector('.posts');
 
 let user = fetch('https://jsonplaceholder.typicode.com/users/'.concat(id))
-    .then(value => value.json());
+    .then(response => {
+        if (response.ok) {
+            return response.json()
+        } else {
+            return Promise.reject('Something went wrong during getting User by id!')
+        }
+    })
+    .catch(error => console.error(error));
 let posts = fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
-    .then(value => value.json());
+    .then(response => {
+        if (response.ok) {
+            return response.json()
+        } else {
+            return Promise.reject("Something went wrong during getting User's Posts!")
+        }
+    })
+    .catch(error => console.error(error));
 Promise.all([user, posts])
     .then((result) => {
         const user = result[0];

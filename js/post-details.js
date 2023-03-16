@@ -24,9 +24,23 @@ function createUserObj(user, userDiv) {
 }
 
 let post = fetch('https://jsonplaceholder.typicode.com/posts/'.concat(postId))
-    .then(value => value.json());
+    .then(response => {
+        if (response.ok) {
+            return response.json()
+        } else {
+            return Promise.reject('Something went wrong during getting Post by post id!')
+        }
+    })
+    .catch(error => console.error(error));
 let comments = fetch('https://jsonplaceholder.typicode.com/comments?postId='.concat(postId))
-    .then(value => value.json());
+    .then(response => {
+        if (response.ok) {
+            return response.json()
+        } else {
+            return Promise.reject('Something went wrong during getting Comments by post id!')
+        }
+    })
+    .catch(error => console.error(error));
 Promise.all([post, comments])
     .then((result) => {
         const post = result[0];
