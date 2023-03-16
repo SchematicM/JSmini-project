@@ -31,9 +31,13 @@
 
 
 }
-@media (max-width: 400px) {
+@media (max-width: 370px) {
     /*index.html*/
+    .content{
+        padding: 5px;
+    }
     .user{
+        padding: 2px;
         height: 28vh;
     }
     /*user-details.html*/

@@ -4,20 +4,7 @@
 // (для получения постов используйте эндпоинт https://jsonplaceholder.typicode.com/users/USER_ID/posts)
 //     6 Каждому посту додати кнопку/посилання, при кліку на яку відбувається перехід на сторінку post-details.html,
 //     котра має детальну інфу про поточний пост.
-
-function createUserObj(user, userDiv) {
-    for (const userKey in user) {
-        let div = document.createElement('div');
-        div.classList.add(userKey);
-        if (typeof user[userKey] !== 'object') {
-            div.innerHTML = `<p>${userKey} : ${user[userKey]}</p>`
-        } else {
-            div.innerHTML = `<p>${userKey} :</p> `;
-            createUserObj(user[userKey], div);
-        }
-        userDiv.appendChild(div);
-    }
-}
+import createUserObj from './common.js';
 
 const currentURL = new URL(location.href);
 const id = currentURL.searchParams.get('id');

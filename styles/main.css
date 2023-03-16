@@ -50,15 +50,20 @@ button {
     box-sizing: border-box;
     border-style: outset;
     border-radius: 10px;
+    position: relative;
 }
 
 /*index.html */
 .user {
     width: 49%;
-    height: 15vh;
+    height: 17vh;
     padding: 15px;
     display: flex;
     flex-direction: column;
+}
+.user > a {
+    position: absolute;
+    bottom: 0;
 }
 
 /*user-details.html*/
