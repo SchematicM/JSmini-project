@@ -52,7 +52,7 @@ Promise.all([user, posts])
                 button.href = 'post-details.html?postId='.concat(posts[i].id);
             })
         }
-    }).then(resolve => {
+    }).then(() => {
     const postsButton = document.getElementsByTagName('button')[0];
     postsButton.addEventListener('click', function () {
         postDiv.classList.toggle('hide');

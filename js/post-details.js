@@ -42,7 +42,7 @@ Promise.all([post, comments])
             div.innerHTML += `<h4>${comment.email}</h4><h4>Title: ${comment.name}</h4><p>${comment.body}</p>`;
             commentsContainer.appendChild(div);
         }
-    }).then(resolve => {
+    }).then(() => {
     const postsButton = document.getElementsByTagName('button')[0];
     postsButton.addEventListener('click', function () {
         commentsDiv.classList.toggle('hide');
