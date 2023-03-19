@@ -24,7 +24,6 @@ fetch('https://jsonplaceholder.typicode.com/users')
             detailsButton.innerText = 'Details';
             userDiv.append(h3, detailsButton);
             usersDiv.appendChild(userDiv);
-
         }
 
         const detailsButtons = document.getElementsByClassName('details');
@@ -36,4 +35,3 @@ fetch('https://jsonplaceholder.typicode.com/users')
         }
     })
     .catch(error => console.error(error));
-

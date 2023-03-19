@@ -30,6 +30,7 @@ let posts = fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
         }
     })
     .catch(error => console.error(error));
+
 Promise.all([user, posts])
     .then((result) => {
         const user = result[0];
@@ -52,7 +53,7 @@ Promise.all([user, posts])
                 button.href = 'post-details.html?postId='.concat(posts[i].id);
             })
         }
-    }).then(resolve => {
+    }).then(() => {
     const postsButton = document.getElementsByTagName('button')[0];
     postsButton.addEventListener('click', function () {
         postDiv.classList.toggle('hide');
@@ -63,6 +64,4 @@ Promise.all([user, posts])
             postsButton.innerText = 'Hide Posts'
         }
     });
-
 })
-

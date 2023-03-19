@@ -1,10 +1,14 @@
 /*General style*/
-body {
+body, head {
+    height: 100%;
     margin: 0;
     padding: 0;
+    background: linear-gradient(to right, mediumblue, yellow);
+    background-size: cover;
+    color: white;
 }
 
-h3, h5 {
+h3, h4, h5 {
     margin: 5px;
 }
 
@@ -23,6 +27,7 @@ p {
 .hide {
     display: none;
 }
+
 .show-hide-button {
     display: flex;
     justify-content: center;
@@ -30,10 +35,13 @@ p {
 
 button {
     width: 90%;
-    background: rgba(239, 239, 239, 0.5);
-    border: 1px solid black;
-    border-radius: 3px;
+    height: 30px;
+    margin-top: 20px;
+    background: rgba(161, 160, 160, 0.7);
+    border: 1px solid white;
+    border-radius: 25px;
     justify-content: center;
+    color: white;
 }
 
 .users, .posts, .comments {
@@ -45,8 +53,8 @@ button {
     row-gap: 2vw;
 }
 
-.user, .post, .comment {
-    background: rgba(239, 239, 239, 0.5);
+.user, .post, .comment, .user-info, .post-info {
+    background: rgba(161, 160, 160, 0.7);
     box-sizing: border-box;
     border-style: outset;
     border-radius: 10px;
@@ -61,6 +69,7 @@ button {
     display: flex;
     flex-direction: column;
 }
+
 .user > a {
     position: absolute;
     bottom: 0;
@@ -81,6 +90,7 @@ button {
 
 .post {
     width: 19%;
+    height: 22vh;
     padding: 15px;
     position: relative;
 }
@@ -104,11 +114,11 @@ a {
     width: 90px;
     height: 30px;
     margin: 5px;
-    background-color: rgba(185, 184, 184, 0.3);
+    background-color: rgba(86, 84, 84, 0.4);
     text-align: center;
     box-sizing: border-box;
     padding: 5px;
     border-style: solid;
-    border-color: rgba(0, 0, 0, 0.6);
-    border-radius: 5px;
+    border-color: rgba(255, 255, 255);
+    border-radius: 15px;
 }
